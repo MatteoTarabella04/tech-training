@@ -13,7 +13,9 @@ return new class extends Migration {
     public function up()
     {
         Schema::table('dishes', function (Blueprint $table) {
-            $table->foreignId('restaurant_id')->constrained('restaurants');
+            $table->unsignedBigInteger('restaurant_id')->nullable()->after('id');
+
+            $table->foreign('restaurant_id')->references('id')->on('restaurants')->cascadeOnDelete();
         });
     }
 
