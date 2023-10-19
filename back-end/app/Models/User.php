@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Restaurant::class);
     }
+
+    public function getId()
+    {
+        return $this->id;
+    }
 }
