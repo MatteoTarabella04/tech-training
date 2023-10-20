@@ -6,7 +6,7 @@ use App\Models\Typology;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class TypolgySeeder extends Seeder
+class TypologySeeder extends Seeder
 {
     /**
      * Run the database seeds.
