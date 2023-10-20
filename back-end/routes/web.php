@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Admin\RestaurantController;
+use App\Http\Controllers\Admin\DishController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,8 @@ Route::middleware(['auth', 'verified'])
     ->name('admin.')
     ->prefix('admin')
     ->group(function () {
-        Route::resource('/', RestaurantController::class)->parameters(['restaurants' => 'restaurant:slug']);
+        Route::resource('/restaurant', RestaurantController::class)->parameters(['restaurants' => 'restaurant:slug']);
+        Route::resource('/dish', DishController::class)->parameters(['dishes' => 'dish:slug']);
     });
 
 Route::middleware('auth')->group(function () {
