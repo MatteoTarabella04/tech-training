@@ -20,7 +20,9 @@ return new class extends Migration {
             $table->string('phone');
             $table->tinyInteger('status')->default(1);
             $table->decimal('totalprice', 10, 2);
+            $table->unsignedBigInteger('restaurant_id');
             $table->timestamps();
+            
         });
     }
 

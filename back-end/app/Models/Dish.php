@@ -11,11 +11,12 @@ class Dish extends Model
 
     public function restaurant()
     {
-        return $this->hasMany(Restaurant::class);
+        return $this->belongsTo(Restaurant::class);
     }
 
     public function order()
     {
         return $this->belongsToMany(Order::class);
     }
+    
 }

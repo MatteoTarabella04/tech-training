@@ -26,6 +26,11 @@ return new class extends Migration {
      */
     public function down()
     {
+        Schema::table('restaurant_typology', function (Blueprint $table) {
+            $table->dropForeign(['typology_id']);
+            $table->dropForeign(['restaurant_id']);
+        });
+    
         Schema::dropIfExists('typologies');
     }
 };

@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->string('ingredients');
             $table->tinyInteger('visible')->default(1);
             $table->decimal('price', 10, 2);
+            $table->unsignedBigInteger('restaurant_id');
             $table->timestamps();
         });
     }
