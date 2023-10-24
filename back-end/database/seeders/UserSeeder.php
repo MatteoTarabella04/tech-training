@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
         foreach ($users as $users) {
             $newUser = new User;
             $newUser->name = $users["name"];
-            $newUser->lastname = $users["lastname"];
+            $newUser->last_name = $users["last_name"];
             $newUser->email = $users["email"];
             $newUser->password = Hash::make($users["password"]);
             $newUser->save();
