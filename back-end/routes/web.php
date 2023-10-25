@@ -29,8 +29,8 @@ Route::middleware(['auth', 'verified'])
     ->name('admin.')
     ->prefix('admin')
     ->group(function () {
-        Route::resource('/restaurant', RestaurantController::class)->parameters(['restaurants' => 'restaurant:slug']);
-        Route::resource('/dish', DishController::class)->parameters(['dishes' => 'dish:slug']);
+        Route::resource('/restaurant', RestaurantController::class);
+        Route::resource('/dish', DishController::class);
     });
 
 Route::middleware('auth')->group(function () {
