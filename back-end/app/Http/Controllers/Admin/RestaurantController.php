@@ -23,7 +23,7 @@ class RestaurantController extends Controller
         $restaurants = Restaurant::all();
         $typologies = Typology::all();
         $dishes = Dish::all();
-        return view('admin.restaurant', compact('restaurants', 'id', 'typologies', 'dishes'));
+        return view('admin.restaurant.index', compact('restaurants', 'id', 'typologies', 'dishes'));
     }
 
     public function create()
