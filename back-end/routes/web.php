@@ -17,20 +17,25 @@ use App\Http\Controllers\Admin\DishController;
 |
 */
 
+// REDIRECT TO LOGIN PAGE WHEN A GUEST LANDS ON THE HOMEPAGE
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// REDIRECT TO DASHBOARD WHEN A REGISTERED USER LANDS ON THE HOMEPAGE
+Route::get('/', function () {
+    return to_route('admin.dashboard');
+})->middleware(['auth', 'verified']);
 
 Route::middleware(['auth', 'verified'])
     ->name('admin.')
     ->prefix('admin')
     ->group(function () {
+        //TODO: add dashboard controller
         Route::resource('/restaurant', RestaurantController::class);
-        Route::resource('/dish', DishController::class);
+        Route::resource('/dish', DishController::class)->parameters([
+            'dishes' => 'dishes:id',
+        ]);
     });
 
 Route::middleware('auth')->group(function () {
@@ -39,4 +44,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
