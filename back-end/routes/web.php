@@ -34,7 +34,7 @@ Route::middleware(['auth', 'verified'])
         //TODO: add dashboard controller
         Route::resource('/restaurant', RestaurantController::class);
         Route::resource('/dish', DishController::class)->parameters([
-            'dishes' => 'dishes:id',
+            'dishes' => 'dishe:id',
         ]);
     });
 
