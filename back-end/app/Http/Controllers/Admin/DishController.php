@@ -20,13 +20,13 @@ class DishController extends Controller
         }
         $restaurants = Restaurant::all();
         $dishes = Dish::all();
-        return view('admin.dishes.index', compact('restaurants', 'id', 'dishes'));
+        return view('admin.dish.index', compact('restaurants', 'id', 'dishes'));
     }
 
     public function create()
     {
         $restaurants = Restaurant::all();
-        return view('admin.dishes.create', compact('restaurants'));
+        return view('admin.dish.create', compact('restaurants'));
     }
 
     public function store(StoreDishRequest $request)
@@ -39,13 +39,13 @@ class DishController extends Controller
     public function show(Dish $dish)
     {
         $restaurants = Restaurant::all();
-        return view('admin.dishes.show', compact('dish', 'restaurant'));
+        return view('admin.dish.show', compact('dish', 'restaurant'));
     }
 
     public function edit(Dish $dish)
     {
         $restaurants = Restaurant::all();
-        return view('admin.restaurants.edit', compact('dish', 'restaurant'));
+        return view('admin.dish.edit', compact('dish', 'restaurant'));
     }
 
     public function update(UpdateDishRequest $request, Dish $dish)
@@ -59,6 +59,6 @@ class DishController extends Controller
         //$dish->restaurant()->sync([]);
         $dish->delete();
 
-        return redirect()->route('admin.dishes.index')->with('message', 'Dish Deleted');
+        return redirect()->route('admin.dish.index')->with('message', 'Dish Deleted');
     }
 }
