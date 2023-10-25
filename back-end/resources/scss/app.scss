@@ -16,6 +16,7 @@ body {
     /* IE 10 and IE 11 */
     user-select: none;
     /* Standard syntax */
+    background-color: $deliveboo-cyan-transparent;
 }
 
 /* main admin */
@@ -28,7 +29,7 @@ body {
     color: $deliveboo-black !important;
     background-image: linear-gradient(to right,
             $deliveboo-cyan-sponsor,
-            $deliveboo-cyan-sponsor 50%,
+            $deliveboo-cyan-transparent 50%,
             $deliveboo-black 50%);
     background-size: 200% 100%;
     background-position: -100%;
@@ -64,4 +65,118 @@ body {
 .animated-span:active{
     transition: all 0.1s ease-in-out;
     transform: scale(0.8);
+}
+
+.btn-1:active,
+.btn-4:active {
+  scale: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-1 {
+  color: $deliveboo-white;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid $deliveboo-white;
+  cursor: pointer;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: $deliveboo-cyan-sponsor;
+  font-weight: 600;
+}
+
+.btn-1-blue {
+  background-color: $deliveboo-cyan-sponsor !important;
+}
+
+.btn-1-orange {
+  background-color: $deliveboo-orange !important;
+}
+
+.btn-1-green {
+  background-color: $deliveboo-green !important;
+}
+
+.btn-1-gold {
+  background-color: $deliveboo-gold !important;
+}
+
+.btn-1-red {
+  background-color: $deliveboo-red !important;
+}
+
+.btn-1-darkred {
+  background-color: $deliveboo-dark-red !important;
+}
+
+.btn-1-black {
+  background-color: $deliveboo-light-black !important;
+}
+
+.btn-1:before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 50px;
+  background: $deliveboo-white;
+  left: -55px;
+  top: -40px;
+  transform: rotate(37deg);
+  transition: all .3s;
+  opacity: 0.3;
+}
+
+.btn-1:hover:before {
+  left: 95%;
+}
+
+.btn-2 {
+  color: $deliveboo-white;
+  text-align: center;
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid $deliveboo-white;
+  cursor: pointer;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: $deliveboo-light-grey;
+  font-weight: 600;
+}
+
+.btn-2:before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 50px;
+  background: $deliveboo-white;
+  right: -40px;
+  top: -40px;
+  transform: rotate(37deg);
+  transition: all .3s;
+  opacity: 0.3;
+}
+
+.btn-2:hover:before {
+  right: 105%;
+}
+
+.our-user {
+  font-size: 3rem;
+}
+
+.text-bool {
+  color: $deliveboo-cyan-sponsor;
+}
+
+a {
+  text-decoration: none;
+}
+
+input:focus{
+    box-shadow: 0 0 0 0.25rem $deliveboo-cyan-transparent !important;
 }
