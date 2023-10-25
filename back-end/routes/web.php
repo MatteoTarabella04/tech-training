@@ -17,14 +17,12 @@ use App\Http\Controllers\Admin\DishController;
 |
 */
 
-// REDIRECT TO LOGIN PAGE WHEN A GUEST LANDS ON THE HOMEPAGE
 Route::get('/', function () {
-    return view('auth.login');
+    return view('dashboard');
 });
 
-// REDIRECT TO DASHBOARD WHEN A REGISTERED USER LANDS ON THE HOMEPAGE
 Route::get('/', function () {
-    return to_route('admin.dashboard');
+    return view('dashboard');
 })->middleware(['auth', 'verified']);
 
 Route::middleware(['auth', 'verified'])
