@@ -1,6 +1,67 @@
+/* @use './partials/dashboard.scss'; */
+@use './root.scss' as *;
 @import '~bootstrap/scss/bootstrap';
 
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/regular";
 @import "~@fortawesome/fontawesome-free/scss/solid";
 @import "~@fortawesome/fontawesome-free/scss/brands";
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+/* main admin */
+#main-admin {
+    height: calc(100vh - 149px);
+    overflow-y: scroll;
+}
+
+.animated-span {
+    color: $deliveboo-black !important;
+    background-image: linear-gradient(to right,
+            $deliveboo-cyan-sponsor,
+            $deliveboo-cyan-sponsor 50%,
+            $deliveboo-black 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+.animated-span:before {
+    content: '';
+    background: $deliveboo-cyan-sponsor;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.animated-span:hover {
+    background-position: 0;
+}
+
+.animated-span:hover::before {
+    width: 100%;
+}
+
+.animated-span:active{
+    transition: all 0.1s ease-in-out;
+    transform: scale(0.8);
+}
