@@ -23,14 +23,14 @@ class RestaurantController extends Controller
         $restaurants = Restaurant::all();
         $typologies = Typology::all();
         $dishes = Dish::all();
-        return view('admin.restaurants.index', compact('restaurants', 'id', 'typologies', 'dishes'));
+        return view('admin.restaurant', compact('restaurants', 'id', 'typologies', 'dishes'));
     }
 
     public function create()
     {
         $typologies = Typology::all();
         $dishes = Dish::all();
-        return view('admin.restaurants.create', compact('typologies', 'dishes'));
+        return view('admin.restaurant.create', compact('typologies', 'dishes'));
     }
 
     public function store(StoreRestaurantRequest $request)
@@ -44,14 +44,14 @@ class RestaurantController extends Controller
     {
         $typologies = Typology::all();
         $dishes = Dish::all();
-        return view('admin.restaurants.show', compact('restaurant', 'typologies', 'dishes'));
+        return view('admin.restaurant.show', compact('restaurant', 'typologies', 'dishes'));
     }
 
     public function edit(Restaurant $restaurant)
     {
         $typologies = Typology::all();
         $dishes = Dish::all();
-        return view('admin.restaurants.edit', compact('restaurant', 'typologies', 'dishes'));
+        return view('admin.restaurant.edit', compact('restaurant', 'typologies', 'dishes'));
     }
 
     public function update(UpdateRestaurantRequest $request, Restaurant $restaurant)
@@ -66,7 +66,7 @@ class RestaurantController extends Controller
         $restaurant->typologies()->sync([]);
         $restaurant->delete();
 
-        return redirect()->route('admin.restaurants.index')->with('message', 'Restaurant Deleted');
+        return redirect()->route('admin.restaurant.index')->with('message', 'Restaurant Deleted');
     }
 
 }
