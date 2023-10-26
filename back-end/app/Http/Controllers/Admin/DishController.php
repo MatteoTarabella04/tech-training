@@ -9,6 +9,7 @@ use App\Models\Restaurant;
 use App\Models\Dish;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class DishController extends Controller
@@ -34,18 +35,19 @@ class DishController extends Controller
 
         //
 
+
     }
 
     public function show(Dish $dish)
     {
         $restaurants = Restaurant::all();
-        return view('admin.dishes.show', compact('dish', 'restaurant'));
+        return view('admin.dishes.show', compact('dish', 'restaurants'));
     }
 
     public function edit(Dish $dish)
     {
         $restaurants = Restaurant::all();
-        return view('admin.dishes.edit', compact('dish', 'restaurant'));
+        return view('admin.dishes.edit', compact('dish', 'restaurants'));
     }
 
     public function update(UpdateDishRequest $request, Dish $dish)
