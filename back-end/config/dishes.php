@@ -6,7 +6,7 @@ return [
       "description" => "Pasta all'uovo con tartufo nero di stagione",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "18.00",
+      "price" => 18.00,
       "restaurant_id" => "1"
    ],
    [
@@ -14,7 +14,7 @@ return [
       "description" => "Pasta all'uovo con ragu di manzo",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "14.50",
+      "price" => 14.50,
       "restaurant_id" => "1"
    ],
    [
@@ -22,7 +22,7 @@ return [
       "description" => "lattuga con pomodorini cipolla e parmigiano",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "8.00",
+      "price" => 8.00,
       "restaurant_id" => "1"
    ],
    [
@@ -30,7 +30,7 @@ return [
       "description" => "Pomodoro, mozzarella, basilico fresco, sale e olio",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "7.00",
+      "price" => 7.00,
       "restaurant_id" => "2"
    ],
    [
@@ -38,7 +38,7 @@ return [
       "description" => "Pomodoro, mozzarella, prosciutto crudo, funghi, olive nere, carciofini e uova.",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "8.00",
+      "price" => 8.00,
       "restaurant_id" => "2"
    ],
    [
@@ -46,7 +46,7 @@ return [
       "description" => "Suppli classico al ragu",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "2.50",
+      "price" => 2.50,
       "restaurant_id" => "2"
    ],
    [
@@ -54,7 +54,7 @@ return [
       "description" => "Riso con salmone crudo",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "3.00",
+      "price" => 3.00,
       "restaurant_id" => "3"
    ],
    [
@@ -62,7 +62,7 @@ return [
       "description" => "Riso con tonno crudo",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "3.50",
+      "price" => 3.50,
       "restaurant_id" => "3"
    ],
    [
@@ -70,7 +70,7 @@ return [
       "description" => "Rotolo di riso ripieno",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "5.00",
+      "price" => 5.00,
       "restaurant_id" => "3"
    ],
    [
@@ -78,7 +78,7 @@ return [
       "description" => "Riso piselli, prosciutto cotto, uova",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "6.00",
+      "price" => 6.00,
       "restaurant_id" => "3"
    ],
    [
@@ -86,7 +86,7 @@ return [
       "description" => "Pollo con crema a base di salsa di soia e mandorle.",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "4.00",
+      "price" => 4.00,
       "restaurant_id" => "3"
    ],
    [
@@ -94,7 +94,7 @@ return [
       "description" => "Tartare di tonno fresco accompagnato de un contorno di avocado.",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "5.00",
+      "price" => 5.00,
       "restaurant_id" => "3"
    ],
    [
@@ -102,7 +102,7 @@ return [
       "description" => "Tartare di salmone fresco accompagnato de un contorno di avocado.",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "5.00",
+      "price" => 5.00,
       "restaurant_id" => "3"
    ],
    [
@@ -110,7 +110,7 @@ return [
       "description" => "Ravioli giapponesi con carne e verdure",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "4.50",
+      "price" => 4.50,
       "restaurant_id" => "3"
    ],
    [
@@ -118,7 +118,7 @@ return [
       "description" => "Riso sushi, salmone marinato con salsa teriyaki e miele. julienne di iceberg, alga wakame, alghe nori, mango, more, pomodorini, sesamo nero, salsa teriyaki.",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "14.00",
+      "price" => 14.00,
       "restaurant_id" => "3"
    ],
    [
@@ -126,7 +126,7 @@ return [
       "description" => "Riso sushi, gamberi rossi crudi con salsa agli agrumi, misticanza, cappuccio viola, ananas, edamame, perle di riso, salsa agrumi.",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "15.00",
+      "price" => 15.00,
       "restaurant_id" => "3"
    ],
    [
@@ -134,7 +134,7 @@ return [
       "description" => "Riso sushi, rucola, avocado, mango, pomodorini, carote allo zenzero, edamame, daikon, olio di oliva.",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "12.00",
+      "price" => 12.00,
       "restaurant_id" => "3"
    ],
    [
@@ -142,7 +142,7 @@ return [
       "description" => "Gelato alla frutta artigianale",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "3.00",
+      "price" => 3.00,
       "restaurant_id" => "4"
    ],
    [
@@ -150,7 +150,7 @@ return [
       "description" => "Tortino con cuore caldo al cioccolato",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "4.00",
+      "price" => 4.00,
       "restaurant_id" => "4"
    ],
    [
@@ -158,7 +158,7 @@ return [
       "description" => "Crepes alla nutella/marmellata",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "3.00",
+      "price" => 3.00,
       "restaurant_id" => "4"
    ],
    [
@@ -166,7 +166,7 @@ return [
       "description" => "Piadina con Kebab pollo e tacchino",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "4.00",
+      "price" => 4.00,
       "restaurant_id" => "5"
    ],
    [
@@ -174,7 +174,7 @@ return [
       "description" => "Hamburger da 200gr con bacon croccante e cheddar",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "7.00",
+      "price" => 7.00,
       "restaurant_id" => "5"
    ],
    [
@@ -182,7 +182,7 @@ return [
       "description" => "Patatine classiche fritte in olio di semi",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "3.00",
+      "price" => 3.00,
       "restaurant_id" => "5"
    ],
    [
@@ -190,7 +190,7 @@ return [
       "description" => "Piadina con pollo riso fagioli e salsa messicana",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "8.00",
+      "price" => 8.00,
       "restaurant_id" => "6"
    ],
    [
@@ -198,7 +198,7 @@ return [
       "description" => "Piadina con pollo peperoncino e salsa messicana",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "9.00",
+      "price" => 9.00,
       "restaurant_id" => "6"
    ],
    [
@@ -206,7 +206,7 @@ return [
       "description" => "Chips di mais con cheddar servite con salse tex mex",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "6.00",
+      "price" => 6.00,
       "restaurant_id" => "6"
    ],
    [
@@ -214,7 +214,7 @@ return [
       "description" => "Una fresca bontà d’ispirazione greca.",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "9.00",
+      "price" => 9.00,
       "restaurant_id" => "7"
    ],
    [
@@ -222,7 +222,7 @@ return [
       "description" => "Saporiti e leggeri, questi filoncini sono l’ideale sia come stuzzichini per le feste sia per un rapido spuntino!",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "7.70",
+      "price" => 7.70,
       "restaurant_id" => "7"
    ],
    [
@@ -230,7 +230,7 @@ return [
       "description" => "Pochi ingredienti semplici, i broccoli e i nostri Panini BIO delle polpette di broccoli che vi stupiranno per aspetto appetitoso e sapore IRRESISTIBILE!",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "6.00",
+      "price" => 6.00,
       "restaurant_id" => "7"
    ],
    [
@@ -238,7 +238,7 @@ return [
       "description" => "Tagliata di manzo su letto di rucola",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "15.00",
+      "price" => 15.00,
       "restaurant_id" => "8"
    ],
    [
@@ -246,7 +246,7 @@ return [
       "description" => "Bistecca di controfiletto di manzo",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "18.00",
+      "price" => 18.00,
       "restaurant_id" => "8"
    ],
    [
@@ -254,7 +254,7 @@ return [
       "description" => "Costine di maialino da latte cotte a bassa temperatura e caramellata in salsa BBQ",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "13.00",
+      "price" => 13.00,
       "restaurant_id" => "8"
    ],
    [
@@ -262,7 +262,7 @@ return [
       "description" => "Gustoso hamburger di manzo tritato a cui è data la forma di un disco schiacciato, ben cotta fuori e al sangue dentro, che ben si sposa con insalate, pomodori e patatine.",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "16.00",
+      "price" => 16.00,
       "restaurant_id" => "8"
    ],
    [
@@ -270,7 +270,7 @@ return [
       "description" => "Riso tipico senegalese",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "7.00",
+      "price" => 7.00,
       "restaurant_id" => "9"
    ],
    [
@@ -278,7 +278,7 @@ return [
       "description" => "Pesce speziato al forno",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "9.00",
+      "price" => 9.00,
       "restaurant_id" => "9"
    ],
    [
@@ -286,7 +286,7 @@ return [
       "description" => "Riso con pesce, aglio, cipolla e spezie piccanti",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "6.00",
+      "price" => 6.00,
       "restaurant_id" => "9"
    ],
    [
@@ -294,7 +294,7 @@ return [
       "description" => "Riso con pesce, aglio, cipolla e spezie piccanti",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "6.00",
+      "price" => 6.00,
       "restaurant_id" => "9"
    ],
    [
@@ -302,7 +302,7 @@ return [
       "description" => "Riso con pesce, aglio, cipolla e spezie piccanti",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "6.00",
+      "price" => 6.00,
       "restaurant_id" => "9"
    ],
    [
@@ -310,7 +310,7 @@ return [
       "description" => "Pollo con salsa speziata arancione, fatta con curry, panna e pomodorisalsa speziata arancione, fatta con curry, panna e pomodori",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "6.00",
+      "price" => 6.00,
       "restaurant_id" => "10"
    ],
    [
@@ -318,7 +318,7 @@ return [
       "description" => "Piccolo panino fritto rotondo e cavo, riempito con dell’acqua aromatizzata, il pani imli",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "3.00",
+      "price" => 3.00,
       "restaurant_id" => "10"
    ],
    [
@@ -326,7 +326,7 @@ return [
       "description" => "Zuppa tradizionalmene cucinata con gamberetti",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "5.00",
+      "price" => 5.00,
       "restaurant_id" => "10"
    ],
    [
@@ -334,7 +334,7 @@ return [
       "description" => "Noodles di riso saltati in padella con uova e tofu, insaporito con polpa di tamarindo, salsa di pesce, gamberi, aglio, peperoncino e zucchero di palma",
       "ingredients" => "Ingredienti",
       "visible" => "1",
-      "price" => "8.00",
+      "price" => 8.00,
       "restaurant_id" => "10"
    ],
 ];
