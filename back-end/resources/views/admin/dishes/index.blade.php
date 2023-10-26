@@ -2,7 +2,6 @@
 
 @section('content')
     <section>
-        <div class=""></div>
         <div class="container pt-3">
             @if (session('message'))
                 <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
@@ -23,6 +22,7 @@
                     <span style="margin: 10px 0 5px 0;">Aggiungi piatto</span></a>
             </div>
             <div class="row">
+
                 @forelse($dishes as $dish)
                     <div class="col-12 d-flex align-items-center flex-wrap rounded-1">
                         <div
@@ -101,11 +101,8 @@
                     <hr>
                 @empty
                     <div class="col">
-                        <h3 class="text-center">Non hai ancora registrato alcun appartamento</h3>
+                        <h3 class="text-center">Non hai ancora piatti</h3>
                     </div>
                 @endforelse
-            </div>
-            {{-- {{ $dish->links('pagination::bootstrap-5') }} --}}
-        </div>
     </section>
 @endsection
