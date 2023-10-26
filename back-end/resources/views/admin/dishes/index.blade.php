@@ -12,7 +12,7 @@
             @endif
             <h1 class="fw-bold text-dark-emphasis page_title">I tuoi piatti</h1>
             <div class="d-flex justify-content-end my-4">
-                <a class="btn bg_special text-end" {{-- href="{{ route('admin.dishes.create') }}" --}}>
+                <a class="btn bg_special text-end" href="{{ route('admin.dish.create') }}">
                     <span class="icon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-plus-lg" viewBox="0 0 16 16">
@@ -20,7 +20,7 @@
                                 d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
                         </svg>
                     </span>
-                    <span class="" style="margin: 10px 0 5px 0;">Aggiungi piatto</span></a>
+                    <span style="margin: 10px 0 5px 0;">Aggiungi piatto</span></a>
             </div>
             <div class="row">
                 @forelse($dishes as $dish)
@@ -34,7 +34,7 @@
                             <div class="">
                                 <div
                                     class="d-flex justify-content-start justify-content-sm-center justify-content-md-start flex-wrap flex-sm-column flex-md-row gap-2">
-                                    <a class="btn my-2 btn-light"{{--  href="{{ route('admin.dishes.show', $dish) }} --}}">
+                                    <a class="btn my-2 btn-light" href="{{ route('admin.dish.show', $dish) }}">
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
@@ -45,7 +45,7 @@
                                         </span>
                                         <span class="">Dettagli</span>
                                     </a>
-                                    <a class="btn my-2  btn-light" {{-- href="{{ route('admin.dishes.edit', $dish) }}" --}}>
+                                    <a class="btn my-2  btn-light" {{-- href="{{ route('admin.dish.edit', $dish) }}" --}}>
                                         <span class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                 fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
@@ -85,7 +85,7 @@
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-dark"
                                                         data-bs-dismiss="modal">Chiudi</button>
-                                                    <form action="{{-- {{ route('admin.dishes.destroy', $dish->slug) }} --}}" method="post">
+                                                    <form action="{{-- {{ route('admin.dish.destroy', $dish->slug) }} --}}" method="post">
                                                         @csrf
                                                         @method('DELETE')
                                                         <button type="submit" class="btn btn-danger">Elimina</button>
@@ -105,7 +105,7 @@
                     </div>
                 @endforelse
             </div>
-            {{-- {{ $dishes->links('pagination::bootstrap-5') }} --}}
+            {{-- {{ $dish->links('pagination::bootstrap-5') }} --}}
         </div>
     </section>
 @endsection
