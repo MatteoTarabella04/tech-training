@@ -2,6 +2,6 @@
 
 @section('content')
 
-<h1>modifica</h1>
+<h1>crea</h1>
 
 @endsection
