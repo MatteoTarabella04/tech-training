@@ -8,63 +8,63 @@
 @import "~@fortawesome/fontawesome-free/scss/brands";
 
 body {
-    font-family: 'Manrope', sans-serif;
-    font-weight: 600;
-    -webkit-user-select: none;
-    /* Safari */
-    -ms-user-select: none;
-    /* IE 10 and IE 11 */
-    user-select: none;
-    /* Standard syntax */
-    background-color: $deliveboo-cyan-transparent;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+  background-color: $deliveboo-cyan-transparent;
 }
 
 /* main admin */
 #main-admin {
-    height: calc(100vh - 149px);
-    overflow-y: scroll;
+  height: calc(100vh - 149px);
+  overflow-y: scroll;
 }
 
 .animated-span {
-    color: $deliveboo-black !important;
-    background-image: linear-gradient(to right,
-            $deliveboo-cyan-sponsor,
-            $deliveboo-cyan-transparent 50%,
-            $deliveboo-black 50%);
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    padding: 5px 0;
-    position: relative;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
+  color: $deliveboo-black !important;
+  background-image: linear-gradient(to right,
+      $deliveboo-cyan-sponsor,
+      $deliveboo-cyan-transparent 50%,
+      $deliveboo-black 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
 }
 
 .animated-span:before {
-    content: '';
-    background: $deliveboo-cyan-sponsor;
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
+  content: '';
+  background: $deliveboo-cyan-sponsor;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
 }
 
 .animated-span:hover {
-    background-position: 0;
+  background-position: 0;
 }
 
 .animated-span:hover::before {
-    width: 100%;
+  width: 100%;
 }
 
-.animated-span:active{
-    transition: all 0.1s ease-in-out;
-    transform: scale(0.8);
+.animated-span:active {
+  transition: all 0.1s ease-in-out;
+  transform: scale(0.8);
 }
 
 .btn-1:active,
@@ -177,6 +177,53 @@ a {
   text-decoration: none;
 }
 
-input:focus{
-    box-shadow: 0 0 0 0.25rem $deliveboo-cyan-transparent !important;
+input:focus {
+  box-shadow: 0 0 0 0.25rem $deliveboo-cyan-transparent !important;
+}
+
+//cards restaurant
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cards .red {
+  background-color: #f43f5e;
+}
+
+.cards .blue {
+  background-color: #3b82f6;
+}
+
+.cards .green {
+  background-color: #22c55e;
+}
+
+.cards .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100px;
+  width: 250px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card p.tip {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.cards .card p.second-text {
+  font-size: .7em;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
 }

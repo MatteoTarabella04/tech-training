@@ -52,10 +52,10 @@
                     </ul>
                     <ul class="navbar-nav gap-5">
                         <li class="nav-item">
-                            <a class="animated-span text-decoration-none" href="#" class="nav-link">{{ __('Ristoranti') }}</a>
+                            <a class="animated-span text-decoration-none" href="{{route('admin.restaurant.index')}}" class="nav-link">{{ __('Ristoranti') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="animated-span text-decoration-none" href="#" class="nav-link">{{ __('Piatti') }}</a>
+                            <a class="animated-span text-decoration-none" href="{{route('admin.dish.index')}}" class="nav-link">{{ __('Piatti') }}</a>
                         </li>
                     </ul>
                     <!-- Right Side Of Navbar -->
