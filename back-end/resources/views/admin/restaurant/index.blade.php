@@ -51,7 +51,7 @@
             <div class="col-12 my-3">
                 <div class="d-flex justify-content-between">
                     <div>
-                        <a class="btn btn-secondary" href="{{ route('admin.restaurant.create') }}">Add a Restaurant</a>
+                        <a class="btn btn-secondary" href="{{ route('admin.restaurant.create') }}">Aggiungi un ristorante</a>
                     </div>
                 </div>
             </div>
