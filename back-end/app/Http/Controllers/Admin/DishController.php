@@ -20,7 +20,7 @@ class DishController extends Controller
             $id = Auth::user()->getId();
         }
         $restaurants = Restaurant::all();
-        $dishes = Dish::all();
+        $dishes = Dish::where('restaurant_id', $id)->get();
         return view('admin.dishes.index', compact('restaurants', 'id', 'dishes'));
     }
 
