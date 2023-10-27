@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
@@ -17,19 +18,21 @@ use App\Http\Controllers\Admin\DishController;
 |
 */
 
+// REDIRECT TO LOGIN PAGE WHEN A GUEST LANDS ON THE HOMEPAGE
 Route::get('/', function () {
-    return view('dashboard');
+    return view('auth.login');
 });
 
+// REDIRECT TO DASHBOARD WHEN A REGISTERED USER LANDS ON THE HOMEPAGE
 Route::get('/', function () {
-    return view('dashboard');
+    return view('admin.dashboard');
 })->middleware(['auth', 'verified']);
 
 Route::middleware(['auth', 'verified'])
     ->name('admin.')
     ->prefix('admin')
     ->group(function () {
-        //TODO: add dashboard controller
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard'); // admin.dashboard
         Route::resource('/restaurant', RestaurantController::class);
         Route::resource('/dish', DishController::class)->parameters([
             'dishes' => 'dish:id',
