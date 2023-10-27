@@ -2,6 +2,6 @@
 
 @section('content')
 
-<h1>ciao</h1>
+<h1>mostra</h1>
 
 @endsection
