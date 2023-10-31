@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreDishRequest extends FormRequest
+class StoreRestaurantRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,10 +25,9 @@ class StoreDishRequest extends FormRequest
     {
         return [
             "name" => "required|string|max:255",
-            "description" => "nullable|string",
-            "ingredients" => "nullable|string",
-            "visible" => "nullable|numeric",
-            "price" => "required|numeric",
+            "address" => "required|string",
+            "piva" => "required|string",
+            "photo" => "required|image|max:1024",
 
         ];
     }
