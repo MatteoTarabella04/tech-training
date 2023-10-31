@@ -9,6 +9,8 @@ class Dish extends Model
 {
     use HasFactory;
 
+    protected $fillable = ["name", "description", "ingredients", "visible", "price", "restaurant_id"];
+
     public function restaurant()
     {
         return $this->belongsTo(Restaurant::class);
@@ -18,5 +20,5 @@ class Dish extends Model
     {
         return $this->belongsToMany(Order::class);
     }
-    
+
 }
