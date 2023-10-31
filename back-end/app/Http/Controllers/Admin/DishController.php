@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Requests\StoreDishRequest;
+use App\Http\Requests\UpdateDishRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -19,40 +21,66 @@ class DishController extends Controller
         if (Auth::check()) {
             $id = Auth::user()->getId();
         }
-        $restaurants = Restaurant::all();
-        $dishes = Dish::where('restaurant_id', $id)->get();
-        return view('admin.dishes.index', compact('restaurants', 'id', 'dishes'));
+
+        $restaurant = Restaurant::where('user_id', $id)->first();
+
+        $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
+
+        return view('admin.dishes.index', compact('dishes'));
     }
 
     public function create()
     {
-        $restaurants = Restaurant::all();
-        return view('admin.dishes.create', compact('restaurants'));
+        return view('admin.dishes.create');
     }
 
     public function store(StoreDishRequest $request)
     {
+        // USED TO RETRIEVE NEXT ID THAT WILL BE USED
+        /* $statement = DB::select("SHOW TABLE STATUS LIKE 'dishes'");
+        $nextId = $statement[0]->Auto_increment; */
 
-        //
+        $val_data = $request->validated();
+
+        $val_data["restaurant_id"] = Auth::user()->restaurant->id;
+
+        if (!$request->has("visible")) {
+            $val_data["visible"] = 0;
+        }
+
+        $newDish = Dish::create($val_data);
+
+        return view("admin.dishes.index")->with("message", "Nuovo Piatto aggiunto");
+
 
 
     }
 
     public function show(Dish $dish)
     {
-        $restaurants = Restaurant::all();
-        return view('admin.dishes.show', compact('dish', 'restaurants'));
+        $restaurants = Auth::user()->restaurant()->get();
+        return view('admin.dishes.show', compact('dish', 'restaurant'));
     }
 
     public function edit(Dish $dish)
     {
-        $restaurants = Restaurant::all();
-        return view('admin.dishes.edit', compact('dish', 'restaurants'));
+
+        return view('admin.dishes.edit', compact('dish'));
+
+
     }
 
     public function update(UpdateDishRequest $request, Dish $dish)
     {
-        //
+        $val_data = $request->validated();
+
+        if (!$request->has("visible")) {
+            $val_data["visible"] = 0;
+        }
+
+        $dish->update($val_data);
+
+        return view("admin.dishes.index")->with("message", $dish->name . ": modificatto correttamente!");
     }
 
     public function destroy(Dish $dish)
@@ -61,6 +89,6 @@ class DishController extends Controller
         //$dish->restaurant()->sync([]);
         $dish->delete();
 
-        return redirect()->route('admin.dishes.index')->with('message', 'Dish Deleted');
+        return redirect()->route('admin.dishes.index')->with('message', 'Piatto rimosso');
     }
 }
