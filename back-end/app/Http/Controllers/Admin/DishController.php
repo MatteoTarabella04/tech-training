@@ -18,13 +18,10 @@ class DishController extends Controller
 {
     public function index()
     {
-        if (Auth::check()) {
-            $id = Auth::user()->getId();
-        }
+        $restaurant = Auth::user()->restaurant->id;
 
-        $restaurant = Restaurant::where('user_id', $id)->first();
-
-        $dishes = Dish::where('restaurant_id', $restaurant->id)->get();
+        $dishes = Dish::where('restaurant_id', $restaurant)->get();
+        //dd($dishes);
 
         return view('admin.dishes.index', compact('dishes'));
     }
@@ -58,7 +55,7 @@ class DishController extends Controller
 
     public function show(Dish $dish)
     {
-        $restaurants = Auth::user()->restaurant()->get();
+        //$restaurant = Auth::user()->restaurant()->get();
         return view('admin.dishes.show', compact('dish', 'restaurant'));
     }
 
@@ -89,6 +86,6 @@ class DishController extends Controller
         //$dish->restaurant()->sync([]);
         $dish->delete();
 
-        return redirect()->route('admin.dishes.index')->with('message', 'Piatto rimosso');
+        return view('admin.dishes.index')->with('message', 'Piatto rimosso');
     }
 }
